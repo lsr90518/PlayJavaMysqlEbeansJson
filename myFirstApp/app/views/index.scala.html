@@ -1,0 +1,20 @@
+@(message: String)
+<!DOCTYPE html>
+<html>
+	<head><title>index</title></head>
+	<body>
+		<form action="/adduser">
+			<input type="text" name="username" />
+			<input type="submit" value="adduser" />
+		</form>
+
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$.get("/getUserByName?name=lsr3",function(data){
+				console.log(data[0].name);
+			});
+		});
+	</script>
+	</body>
+</html>
